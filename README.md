@@ -1,3 +1,3 @@
 # djangoQrWebsite
-simple qr code generator website made with django.
+simple qr code generator website
 kubikademir
