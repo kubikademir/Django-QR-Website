@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+    </head>
+
+    
+    <main>
+        <h2>
+          ACM412 PROJECT
+        </h2>
+        <h1>QR CODE GENERATOR</h1>
+        
+
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" autocomplete="off" name="text" id="data" placeholder="Type here...">
+              <button>Generate</button>
+        </form>
+        <h4 class="second">20201308010</h4>
+        <h4 class="first">Kubilay Kaan DEMİR</h4>
+
+        <div class="qr-img">
+            {% if img_name %}
+                <img src="/media/{{ img_name }}" alt="qr code">
+            {% endif %}
+        </div>
+        
+
+        <iframe src="https://gifer.com/embed/2dUa" width=480 height=270.000 frameBorder="0"></iframe>        
+    </main>
+  </body>
+</html>
